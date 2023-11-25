@@ -7,6 +7,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'upload.wikimedia.org'
       },
+      {
+        protocol: 'https',
+        hostname: 'scontent.fayt2-3.fna.fbcdn.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'platform-lookaside.fbsbx.com'
+      },
     ]
   }
 }
