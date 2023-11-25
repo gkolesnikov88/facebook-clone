@@ -64,7 +64,7 @@ function Header() {
                 height={40}
             />
 
-            <p className='whitespace-nowrap font-semibold pr-3'>George Kolesnikov</p>
+            <p className='whitespace-nowrap font-semibold pr-3'>{session.user.name}</p>
             <ViewColumnsIcon className='icon'/>
             <ChatBubbleBottomCenterIcon className='icon'/>
             <BellIcon className='icon'/>
