@@ -1,17 +1,37 @@
 import { useSession } from 'next-auth/react'
-import React from 'react'
+import React, { useRef } from 'react'
 import {
     CameraIcon, VideoCameraIcon
 } from '@heroicons/react/24/solid'
 import {
     FlagIcon
 } from '@heroicons/react/24/outline'
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"; 
+
+import { db } from '@/firebase';
 
 function InputBox() {
   const { data: session } = useSession();
+  const inputRef = useRef(null);
   
-  const sendPost = (e) => {
+  const sendPost = async (e) => {
     e.preventDefault();
+
+    if (inputRef.current.value) {
+        try {
+            const docRef = await addDoc(collection(db, "posts"), {
+                message: inputRef.current.value,
+                name: session.user.name,
+                email: session.user.email,
+                image: session.user.image,
+                timestap: serverTimestamp(),
+            });
+            console.log("Document written with ID: ", docRef.id);
+            inputRef.current.value = '';
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    }
   }
 
   return (
@@ -26,6 +46,7 @@ function InputBox() {
             />
             <form className='flex flex-1'>
                 <input 
+                    ref={inputRef}
                     type='text' 
                     placeholder={`What's on your mind, ${session.user.name}`}
                     className='rounded-full h-12 bg-gray-100 flex-grow px-5
