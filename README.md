@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Used technology: React, Next.js, Tailwind CSS, Firebase Firestore, Firebase Storage, Facebook Login (through next-auth).
+
+Desktop window example:
+![image](https://github.com/gkolesnikov88/facebook-clone/assets/34531794/279f7aa7-92c9-497a-844a-b9cb28987d63)
+
+Smartphone window example:
+![image](https://github.com/gkolesnikov88/facebook-clone/assets/34531794/b1bfbfcf-7b8c-4bd8-b93f-b0b2c21510af)
+
 ## Getting Started
 
 First, run the development server:
