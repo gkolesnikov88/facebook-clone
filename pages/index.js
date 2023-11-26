@@ -2,6 +2,7 @@ import Feed from '@/components/Feed';
 import Header from '@/components/Header'
 import Login from '@/components/Login'
 import Sidebar from '@/components/Sidebar';
+import Widgets from '@/components/Widgets';
 import { getSession } from 'next-auth/react'
 import Head from 'next/head'
 
@@ -12,19 +13,15 @@ export default function Home({session}) {
       <Head>
         <title>Facebook</title>
       </Head>      
-      
-      {/* HEADER  */}
+
       <Header />
 
       <main className='flex'>
-        {/* Sidebar */}
         <Sidebar/>
 
-        {/* Fedd */}
         <Feed />
 
-        {/* Widgets */}
-
+        <Widgets />
       </main>
     </div>
   )
