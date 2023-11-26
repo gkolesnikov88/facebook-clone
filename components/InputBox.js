@@ -27,7 +27,7 @@ function InputBox() {
                   name: session.user.name,
                   email: session.user.email,
                   image: session.user.image,
-                  timestap: serverTimestamp(),
+                  timestamp: serverTimestamp(),
               });
               console.log("Document written with ID: ", docRef.id);
               // Save a post image
