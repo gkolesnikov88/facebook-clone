@@ -33,9 +33,14 @@ function InputBox() {
               // Save a post image
               if (imageToPost) {
                   const storageRef = ref(storage, `posts/${docRef.id}`);
+                  // for base64 image use 'data_url' parameter and metadata contentType: "image/jpeg"
                   uploadString(
                       storageRef,
-                      imageToPost
+                      imageToPost,
+                      'data_url',
+                      {
+                        contentType: "image/jpeg"
+                      }
                   ).then((snapshot) => {
                     // Handle successful uploads on complete
                     console.log("Uploaded a base64 string!");
