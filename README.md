@@ -8,7 +8,7 @@ Desktop window example:
 
 Smartphone window example:
 
-![image](https://github.com/gkolesnikov88/facebook-clone/assets/34531794/b1bfbfcf-7b8c-4bd8-b93f-b0b2c21510af)
+![image](https://github.com/gkolesnikov88/facebook-clone/assets/34531794/35255053-a212-4390-917e-5d9e187a9beb)
 
 ## Getting Started
 
