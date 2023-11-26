@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'scontent.fayt2-3.fna.fbcdn.net'
+        hostname: 'scontent.*'
       },
       {
         protocol: 'https',
